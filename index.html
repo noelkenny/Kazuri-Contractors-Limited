@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazuri Contractors Limited | Eldoret Annex</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<div class="logo"></div>
+    <img src="logo.png" alt="Kazuri Hardware Logo" style="height:40px;vertical-align:middle;">
+    Kazuri Contractors Limited
+</div>
+
+<nav>
+<div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="quote.html">Get a Quote</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()"></i>
+</nav>
+
+<style>
+  .nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+} 
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+</style>
+
+<style>
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-content {
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: white;
+    }
+    
+    .hero-content .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #ff6b00;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+</style>
+
+<section class="hero">
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('product1.jpg')"></div>
+    <div class="slide" style="background-image: url('product2.jpg')"></div>
+    <div class="slide" style="background-image: url('product3.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Building Strength.<br>Supplying Excellence.</h1>
+    <p>Build it right.</p>
+    <a href="products.html" class="btn">Explore Products</a>
+  </div>
+</section>
+
+<style>
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Slideshow Background */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Dark Overlay for Better Text Visibility */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust darkness (0.3 to 0.7) */
+  z-index: 2;
+}
+
+/* Hero Content - Visible on Top */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #ff6b00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: #ff8533;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+</style>
+
+<section class="stats">
+  <div class="stat">
+    <h2>500+</h2>
+    <p>Projects Supplied</p>
+  </div>
+  <div class="stat">
+    <h2>1200+</h2>
+    <p>Happy Contractors</p>
+  </div>
+  <div class="stat">
+    <h2>10+</h2>
+    <p>Years Experience</p>
+  </div>
+</section>
+
+<style>
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stat {
+  background: rgb(4, 4, 51);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.stat:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.stat h2 {
+  margin-top: 15px;
+  color: white;
+}
+</style>
+
+<section class="featured">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <a href="products.html#cement" class="product-card">
+      <img src="cement.jpg" alt="Cement">
+      <h3>Cement</h3>
+    </a>
+    <a href="products.html#steel" class="product-card">
+      <img src="steel.jpg" alt="Steel Bars">
+      <h3>Steel Bars</h3>
+    </a>
+    <a href="products.html#paint" class="product-card">
+      <img src="paint.jpg" alt="Paint">
+      <h3>Paint</h3>
+    </a>
+    <a href="products.html#cabros" class="product-card">
+      <img src="cabros.jpg" alt="Cabros">
+      <h3>Cabros</h3>
+    </a>
+  </div>
+</section>
+
+<style>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.product-card:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+</style>
+
+<footer>
+  <p>© 2026 Kazuri Contractors Limited | Eldoret Annex</p>
+</footer>
+
+<script src="counters.js"></script>
+<script src="script.js"></script>
+
+<script>
+  console.log("Script loaded");
+  
+  const slides = document.querySelectorAll('.slide');
+  console.log("Number of slides:", slides.length);
+  
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+      console.log("Current slide:", currentSlide);
+    }
+    
+    setInterval(nextSlide, 5000);
+  } else {
+    console.error("No slides found!");
+  }
+</script>
+
+</body>
+</html>

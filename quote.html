@@ -1,0 +1,50 @@
+<header>
+    <div class="logo"></div>
+    <img src="logo.png" style="height:40px;vertical-align:middle;">
+</div>
+<div class="container navbar">
+<h2>Kazuri Contractors Limited</h2>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</div>
+</div>
+</header>
+
+<section>
+  <h1>Request a Quote</h1>
+  <form id="quoteForm">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="details" placeholder="Project Details" required></textarea>
+    <button type="submit">Send Quote</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('quoteForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    details: form.details.value
+  };
+  const res = await fetch('/submit-quote', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  });
+  alert('Quote Submitted Successfully!');
+  form.reset();
+});
+</script>
+
+<footer>
+<p>© 2026 Kazuri Contractors Limited | Eldoret Annex Area</p>
+</footer>
